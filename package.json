@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "esqueleto proyecto react",
   "main": "index.jsx",
-  "repository": "https://github.com/tankez0r/",
+  "repository": "https://github.com/tankez0r/react_scaffold",
   "author": "martin torres",
-  "license": "sin licencia bb",
+  "license": "facebook(?",
   "private": false,
   "scripts": {
     "build": "webpack --config config/webpack.prod.js",
