@@ -6,17 +6,19 @@ const devConfig = {
     mode: "production",
     devtool: "source-map",
     optimization: {
-        splitChunk: {
+        splitChunks: {
             chunks: "all"
         }
     },
     plugins: [new MiniCssExtractPlugin()],
     module: {
         rules: [{
-            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader",],
-            test: / \.(css|sass|scss)$/
-        },]
-    }
+            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+            test: /\.(css|sass|scss)$/i
+            
+        }
+       ]
+    } 
     
 }
 

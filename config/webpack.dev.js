@@ -18,8 +18,8 @@ const prodConfig = {
     devtool: "eval-source-map",
     module: {
         rules: [{
-            use: ["style-loader", "css-loader", "sass-loader",],
-            test: / \.(css|sass|scss)$/
+            use: ["style-loader", "css-loader", "sass-loader"],
+            test: /\.(css|sass|scss)$/
         },]
     }
 

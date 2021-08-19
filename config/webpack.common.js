@@ -6,7 +6,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 /** @type {import('webpack').Configuration} */
 module.exports = {
     resolve: {
-        extensions: ['.js', '.jsx', '.json']
+        extensions: ['.js', '.jsx', '.json', '.css', '.scss', 'sass']
     },
     entry: "./src/index.jsx",
 
@@ -35,6 +35,7 @@ module.exports = {
                 template: "./public/index.html"
             }
         ),
+        new ReactRefreshWebpackPlugin
        
     ]
 }
