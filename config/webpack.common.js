@@ -1,7 +1,7 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -24,7 +24,8 @@ module.exports = {
             },
             {
                 type: "asset",
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                exclude: /node_modules/,
+                test: /\.(png|svg|jpg|jpeg|gif|ico|json)$/i,
             }
         ]
     },
@@ -32,10 +33,13 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin(
             {
-                template: "./public/index.html"
+                template: "./public/index.html",
+                filename: './index.html',
+                favicon: './public/favicon.ico',
+                manifest: './public/manifest.json'
+
             }
         ),
-        new ReactRefreshWebpackPlugin
-       
+      
     ]
 }
